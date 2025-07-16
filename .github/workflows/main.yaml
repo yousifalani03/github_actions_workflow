@@ -1,0 +1,13 @@
+name: My Github Actions Workflow
+on: [push] #Tells GitHub to trigger this workflow every time you push to any branch.
+
+
+jobs:
+  testing_github: #defines job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+        run: echo "Hello, Github Actions" #1st step
+      - name: Display repo name
+        run: echo "this Workflow is running in ${{ github.repository }}" #2nd step
+        
